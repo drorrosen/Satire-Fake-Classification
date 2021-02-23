@@ -7,6 +7,9 @@ from pattern.en import sentiment
 from pattern.en import parse, Sentence
 from pattern.en import modality, mood
 import spacy
+import nltk
+nltk.download()
+
 
 DIM_REDUCTION = True
 #spacy.cli.download("en_core_web_sm")
@@ -87,6 +90,4 @@ def predict():
 
 
 if __name__ == '__main__':
-	#app.run(port='8151')
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
+    app.run(debug=True)
