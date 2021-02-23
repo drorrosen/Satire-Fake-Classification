@@ -1,0 +1,8 @@
+Flask==1.0.2
+joblib==0.17.0
+numpy==1.18.5
+pandas==0.23.0
+sentence_transformers==0.4.1.2
+spacy==2.0.18
+Pattern==3.6
+scikit_learn==0.24.1
