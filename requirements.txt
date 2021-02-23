@@ -1,11 +1,12 @@
+nltk==3.3
+spacy==2.0.18
+sentence_transformers==0.4.1.2
+Pattern==3.6
 Flask==1.0.2
-joblib==0.17.0
 numpy==1.18.5
 pandas==0.23.0
-sentence_transformers==0.4.1.2
-spacy==2.0.18
-Pattern==3.6
+joblib==0.17.0
 scikit_learn==0.24.1
-streamlit
+
 https://download.pytorch.org/whl/cpu/torch-1.4.0%2Bcpu-cp36-cp36m-linux_x86_64.whl
 https://download.pytorch.org/whl/cpu/torchvision-0.5.0%2Bcpu-cp36-cp36m-linux_x86_64.whl
