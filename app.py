@@ -6,25 +6,8 @@ from sentence_transformers import SentenceTransformer
 from pattern.en import sentiment
 from pattern.en import parse, Sentence
 from pattern.en import modality, mood
-import spacy
 
 DIM_REDUCTION = True
-nlp = spacy.load("en_core_web_sm")
-
-
-def get_clean_text(row):
-    """
-    Some basic NLP preprocessing - tokenization and removing stopwords.
-    """
-    # lower letters
-    row = row.lower()
-    # removing stopwords
-    row = ' '.join([word for word in row.split() if word not in nlp.Defaults.stop_words])
-    # tokenization
-    doc = nlp(row)
-    row = ' '.join([token.text for token in doc])
-
-    return row
 
 
 
@@ -52,7 +35,6 @@ def predict():
     embbed_text = np.array(embbed_text.tolist())
     embbed_df = pd.DataFrame(embbed_text)
     df = pd.concat([df, embbed_df], axis=1)
-    df['Text'] = get_clean_text(df['Text'][0])
 
     # add number of words
     df['word_num'] = df['Text'].apply(lambda s: len(s.split()))
