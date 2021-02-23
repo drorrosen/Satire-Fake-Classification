@@ -7,16 +7,9 @@ from pattern.en import sentiment
 from pattern.en import parse, Sentence
 from pattern.en import modality, mood
 import spacy
-import nltk
-nltk.download()
-
 
 DIM_REDUCTION = True
-#spacy.cli.download("en_core_web_sm")
 nlp = spacy.load("en_core_web_sm")
-
-from sklearn.model_selection import train_test_split
-from sklearn.decomposition import PCA
 
 
 def get_clean_text(row):
