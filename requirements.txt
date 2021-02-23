@@ -4,7 +4,7 @@ Flask==1.0.2
 numpy==1.18.5
 pandas==0.23.0
 joblib==0.17.0
-scikit_learn==0.24.1
+scikit_learn==0.22.1
 
 https://download.pytorch.org/whl/cpu/torch-1.6.0%2Bcpu-cp36-cp36m-linux_x86_64.whl
 
